@@ -4,11 +4,16 @@ import { Module } from '@nestjs/common';
 // import { ItemsController } from './items/items.controller';
 // import { ItemsService } from './items/items.service';
 import { ItemsModule } from './items/items.module';
+import { UsersModule } from './users/users.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import config from './config'
 
 @Module({
-  imports: [ItemsModule, MongooseModule.forRoot(config.mongoURL)],
+  imports: [
+    MongooseModule.forRoot(config.mongoURL),
+    ItemsModule,
+    UsersModule
+  ],
   // controllers: [AppController],
   // providers: [AppService],
 })

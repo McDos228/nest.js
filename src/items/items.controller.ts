@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Req, Res, Param, Put, Delete } from '@nestjs/common';
 import { CreateItemDto } from './dto/create-item.dto';
 import { ItemsService } from './items.service';
-import { Item } from './interfaces/item.interfaice';
+import { Item } from './interfaces/item.interface';
 import { Request, Response } from 'express';
 
 @Controller('items')
